@@ -1,0 +1,502 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background: #f3f0e4;
+    color: #243326;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   GÓRNA CZĘŚĆ
+========================= */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    padding: 60px 20px;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.15) 0 3px, transparent 4px),
+        radial-gradient(circle at 80% 70%, rgba(255,255,255,0.12) 0 2px, transparent 3px),
+        linear-gradient(145deg, #183c2a, #315d3b 60%, #557344);
+
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "🌿";
+    position: absolute;
+    left: 8%;
+    top: 15%;
+    font-size: 70px;
+    opacity: 0.18;
+    transform: rotate(-20deg);
+}
+
+.hero::after {
+    content: "✦";
+    position: absolute;
+    right: 12%;
+    bottom: 20%;
+    font-size: 55px;
+    opacity: 0.2;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+.logo {
+    width: min(260px, 70vw);
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    border-radius: 50%;
+}
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.85rem;
+    opacity: 0.85;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 8vw, 5rem);
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.intro {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    opacity: 0.92;
+}
+
+
+/* =========================
+   GŁÓWNA ZBIÓRKA
+========================= */
+
+.next-meeting {
+    max-width: 850px;
+    margin: -50px auto 70px;
+    position: relative;
+
+    background: #fffdf5;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(30, 55, 35, 0.18);
+}
+
+.section-label {
+    color: #557344;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.next-meeting h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.meeting-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.meeting-info div {
+    background: #edf0e5;
+    padding: 18px;
+    border-radius: 12px;
+}
+
+.meeting-info strong,
+.meeting-info span {
+    display: block;
+}
+
+.meeting-info strong {
+    margin-bottom: 5px;
+}
+
+.button {
+    display: inline-block;
+
+    background: #315d3b;
+    color: white;
+
+    padding: 12px 20px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    background: #23482d;
+}
+
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    max-width: 1050px;
+    margin: 0 auto 80px;
+    padding: 0 20px;
+}
+
+.menu h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    background: #fffdf5;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    text-decoration: none;
+    color: inherit;
+
+    border: 1px solid #d9ddcc;
+
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(30, 55, 35, 0.12);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.card strong {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.card span:last-child {
+    color: #66705f;
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   SEKCJE
+========================= */
+
+.content-section {
+    max-width: 850px;
+    margin: 0 auto 30px;
+
+    padding: 45px 30px;
+
+    background: #fffdf5;
+
+    border-radius: 18px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.content-section p {
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   FILM
+========================= */
+
+.video-placeholder {
+    text-align: center;
+}
+
+.video-box {
+    min-height: 260px;
+
+    margin-top: 25px;
+
+    border-radius: 15px;
+
+    background: #263e2d;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    font-size: 3rem;
+}
+
+.video-box span {
+    font-size: 1rem;
+}
+
+
+/* =========================
+   SOCIAL MEDIA
+========================= */
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-links a {
+    display: inline-block;
+
+    padding: 12px 18px;
+
+    background: #edf0e5;
+
+    color: #243326;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.social-links a:hover {
+    background: #dfe5d5;
+}
+
+
+/* =========================
+   KONTAKT
+========================= */
+
+.contact a {
+    display: block;
+
+    color: #315d3b;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    margin-top: 10px;
+}
+
+
+/* =========================
+   STOPKA
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 40px 20px;
+
+    background: #183c2a;
+
+    color: white;
+
+    margin-top: 60px;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+
+/* =========================
+   TELEFONY
+========================= */
+
+@media (max-width: 750px) {
+
+    .hero {
+        min-height: 65vh;
+        padding: 50px 20px;
+    }
+
+    .next-meeting {
+        margin: -35px 15px 50px;
+        padding: 25px;
+    }
+
+    .meeting-info {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .content-section {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 30px 22px;
+    }
+
+    .content-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .social-links {
+        flex-direction: column;
+    }
+
+    .social-links a {
+        text-align: center;
+    }
+}
+/* =========================
+   DOLNE MENU APLIKACJI
+========================= */
+
+.bottom-nav {
+    display: none;
+}
+
+
+/* =========================
+   MENU NA TELEFONIE
+========================= */
+
+@media (max-width: 750px) {
+
+    .bottom-nav {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        height: 70px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        background: rgba(255, 253, 245, 0.96);
+
+        border-top: 1px solid #d9ddcc;
+
+        box-shadow: 0 -5px 20px rgba(30, 55, 35, 0.12);
+
+        z-index: 1000;
+
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .nav-item {
+        flex: 1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: 70px;
+
+        color: #315d3b;
+
+        text-decoration: none;
+
+        font-size: 0.72rem;
+        font-weight: bold;
+
+        gap: 3px;
+
+        transition: 0.2s;
+    }
+
+    .nav-icon {
+        font-size: 1.35rem;
+        line-height: 1;
+    }
+
+    .nav-item:hover {
+        transform: translateY(-2px);
+    }
+.nav-item.active {
+    color: #183c2a;
+}
+
+.nav-item.active .nav-icon {
+    transform: scale(1.15);
+}
+
+.nav-item.active::after {
+    content: "";
+    width: 5px;
+    height: 5px;
+
+    background: #557344;
+
+    border-radius: 50%;
+
+    margin-top: 2px;
+}
+    /*
+       Zostawiamy miejsce na dole,
+       żeby menu nie zasłaniało treści.
+    */
+
+    body {
+        padding-bottom: 75px;
+    }
+
+    footer {
+        padding-bottom: 90px;
+    }
+}
