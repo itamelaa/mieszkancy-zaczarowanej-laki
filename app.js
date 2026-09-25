@@ -20,7 +20,7 @@ if ("serviceWorker" in navigator) {
 // =========================
 
 const sections = document.querySelectorAll(
-    "#about, #meetings, #parents, #video, #social, #contact"
+    "#about, #meetings, #parents, #calendar, #social, #contact"
 );
 
 const navItems = document.querySelectorAll(".nav-item");
